@@ -1,1 +1,19 @@
-<p>login works!</p>
+
+<app-navbar></app-navbar>
+<div class="container">
+<form class="form">
+    <h2>Sign In</h2>
+    <br>
+    <div class="name">
+  <label for="fname">Email:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+</div>
+<div class="password">
+  <label for="lname">Password:</label><br>
+  <input type="text" id="lname" name="lname" required><br><br>
+</div>
+  <input type="submit" value="Submit" routerLink="dashboard"><br>
+  <a href="#" class="continue-with-google" routerLink="/dashboard">Continue with Google</a><br>
+  <a class="signup" routerLink="/register">Dont have an account? Sign up</a>
+</form> 
+</div>

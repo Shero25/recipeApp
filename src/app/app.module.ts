@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegisterComponent,
     HomepageComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddRecipeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+.container{
+    background-image: url('../../assets/back4.jpeg');
+    background-size: cover;
+    height: 100vh;
+    
+}
+h1{
+    text-align: center;
+    padding: 100px;
+    color: #ff5101;
+}
+.dash{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+button{
+    padding: 50px;
+    color: white;
+    background-color: #ff5101 ;
+    padding-left: 100px;
+    padding-right:100px ;
+    margin: 20px;
+    font-size: x-large;
+}
+button:hover {
+    background-color: #d44402;
+    color: white;
+}

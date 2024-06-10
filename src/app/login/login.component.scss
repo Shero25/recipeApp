@@ -1,0 +1,58 @@
+.container{
+    background-image: url('../../assets/sweet.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    padding: 50px;
+    position: fixed;
+    right: 0;
+    left: 0;
+   
+    
+}
+
+.form {
+    width: 350px;
+    margin: 15% auto;
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+    opacity: 0.8; 
+}
+
+.name,
+.password {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    background-color: #e0e0e0; 
+    border: none;
+    border-radius: 15px;
+    outline-color: #ff5100;
+}
+
+
+input[type="submit"] {
+    background-color: #ff5100;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color:  #ae3b06;
+}
+.continue-with-google{
+    color: #ae3b06;
+}
+.signup{
+    color: #ae3b06;
+    font-size: small;
+}
+
