@@ -1,13 +1,23 @@
 <app-navbar></app-navbar>
-<div class="container">
-    <div class="right">
-        <h1>Welcome to DishDive</h1>
-        <h3>All of your recipes in one place</h3>
-        <div>
-            <button routerLink="/login">Get Started</button>
-          </div>
+    <div class="container">
+        <h1>Add a New Recipe</h1>
+        <div class="form-container">
+            <form id="recipe-form">
+                <div class="form-group">
+                    <label for="recipe-name">Recipe Name</label>
+                    <input type="text" id="recipe-name" name="recipe-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="ingredients">Ingredients</label>
+                    <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Instructions</label>
+                    <textarea id="instructions" name="instructions" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Add Recipe</button>
+            </form>
+        </div>
     </div>
-<div class="left">
-<img src="assets/sweet.jpeg">
-</div>
-</div>
+
+  

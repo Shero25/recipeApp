@@ -1,10 +1,33 @@
-<nav class="navbar bg-body-tertiary">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <a class="navbar-brand">DishDive</a>
-        <img src="assets/logo.png" alt="Bootstrap" width="50" height="50" routerLink="homepage">
-    
-      </a>
-
-      </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: inset;">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <img src="assets/1.png" alt="Bootstrap" width="50" height="50" routerLink="homepage">
+            <a class="navbar-brand ml-2" href="#">Recipe Radar</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <span class="material-symbols-outlined">home </span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add</a>
+                    <span class="material-symbols-outlined"> add</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="material-symbols-outlined">skillet</span> Recipes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile
+                    <span class="material-symbols-outlined">person </span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
