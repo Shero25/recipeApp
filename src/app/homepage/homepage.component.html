@@ -1,21 +1,29 @@
 <app-navbar></app-navbar>
     <div class="container">
-        <h1>Add a New Recipe</h1>
+        <h1>Add Trip</h1>
         <div class="form-container">
             <form id="recipe-form">
                 <div class="form-group">
-                    <label for="recipe-name">Recipe Name</label>
+                    <label for="recipe-name">Destination</label>
                     <input type="text" id="recipe-name" name="recipe-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="ingredients">Ingredients</label>
-                    <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+                    <label for="recipe-name">Description</label>
+                    <input type="text" id="recipe-name" name="recipe-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="instructions">Instructions</label>
-                    <textarea id="instructions" name="instructions" rows="4" required></textarea>
+                    <label for="ingredients">Activies</label>
+                    <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
                 </div>
-                <button type="submit" class="submit-button">Add Recipe</button>
+                <label for="start">Start Date:</label>
+                 <input type="date" id="start" name="birthday">
+                 <br>
+                   <label for="end">End Date:</label>
+                    <input type="date" id="end" name="end">
+                    <br><br>
+                    <input type="file" id="myFile" name="filename">
+                    <br><br>
+                <button type="submit" class="submit-button">Add Trip</button>
             </form>
         </div>
     </div>

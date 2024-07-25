@@ -1,30 +1,30 @@
 <div class="container">
-    <div class="auth-container">       
+    <div class="auth-container">
         <div class="auth-form">
             <div class="logo">
                 <img src="/assets/event.jpg" alt="TripMate Logo" width="150" height="150">
             </div>
             <h2>Create an account at TripMate</h2>
-            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()"  id="login-form">
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" id="register-form">
                 <div class="form-group">
-                    <label for="email">Full Name:</label>
-                    <input type="name" id="name" name="name" required>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" formControlName="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" formControlName="email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" formControlName="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Confirm Password:</label>
-                    <input type="cpassword" id="cpassword" name="cpassword" required>
+                    <label for="cpassword">Confirm Password:</label>
+                    <input type="password" id="cpassword" formControlName="cpassword" required>
                 </div>
-                <button type="submit" class="auth-button">Login</button>
+                <button type="submit" class="auth-button">Register</button>
             </form>
-            <p>Don't have an account? <a href="register.html" routerLink="/register">Register</a></p>
+            <p>Already have an account? <a routerLink="/login">Login</a></p>
         </div>
     </div>
 </div>

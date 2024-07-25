@@ -21,7 +21,7 @@ body, html {
 
 h1, h2 {
     text-align: center;
-    color: #D82E4A;
+    color:#2d5f51;
 }
 
 .form-container, .recipes-container {
@@ -45,7 +45,7 @@ input[type="text"], textarea {
 }
 
 .submit-button {
-    background-color: #D82E4A;
+    background-color:#52b69a;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -55,7 +55,7 @@ input[type="text"], textarea {
 }
 
 .submit-button:hover {
-    background-color: #b7253a;
+    background-color: #2c7963;
 }
 
 .recipes-container {
@@ -76,16 +76,3 @@ input[type="text"], textarea {
     color: #D82E4A;
 }
 
-.delete-button {
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.delete-button:hover {
-    background-color: #c9302c;
-}

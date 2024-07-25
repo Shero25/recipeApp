@@ -35,13 +35,11 @@ export class LoginComponent {
             this.auth.saveToken(token);
             const userId = this.auth.getUserId(); // Extract user ID from token
             console.log('User ID:', userId);
-            this.auth.saveToken(token);
-            console.log(token);
             
             this.loginSuccess = true; // Set loginSuccess to true on successful login
             this.loginFailed = false;
             console.log("logged in");
-
+  
             // Hide the success message and navigate after 1.5 seconds
             setTimeout(() => {
               this.loginSuccess = false;
@@ -50,7 +48,6 @@ export class LoginComponent {
           } else {
             console.error('Token not found in response');
             this.loginFailed = true;
-            // Hide the failure message after 3 seconds
             setTimeout(() => {
               this.loginFailed = false;
             }, 3000);
@@ -59,7 +56,6 @@ export class LoginComponent {
         (error) => {
           console.error('Login failed', error);
           this.loginFailed = true;
-          // Hide the failure message after 3 seconds
           setTimeout(() => {
             this.loginFailed = false;
           }, 3000);
@@ -69,6 +65,7 @@ export class LoginComponent {
       this.markFormGroupTouched(this.signinForm);
     }
   }
+  
 
   markFormGroupTouched(formGroup: FormGroup) {
     Object.values(formGroup.controls).forEach(control => {
@@ -79,6 +76,4 @@ export class LoginComponent {
       }
     });
   }
-
-
 }

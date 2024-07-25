@@ -21,7 +21,7 @@ body, html {
 
 h1, h2 {
     text-align: center;
-    color: #D82E4A;
+    color: #2d5f51;
 }
 
 .form-container, .recipes-container {
@@ -88,4 +88,8 @@ input[type="text"], textarea {
 
 .delete-button:hover {
     background-color: #c9302c;
+}
+.btn{
+    background-color: #52b69a;
+    color: white;
 }
