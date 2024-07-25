@@ -1,26 +1,30 @@
 <div class="container">
-    <div class="logo">
-        <img src="/assets/1.png" alt="">
-    </div>
-    <div class="text-center mt-4 name">
-      Recipe Radar
-    </div>
-    <form class="p-3 mt-3">
-        <div class="form-field d-flex align-items-center">
-            <input type="text" name="userName" id="userName" placeholder="Username">
+    <div class="auth-container">       
+        <div class="auth-form">
+            <div class="logo">
+                <img src="/assets/event.jpg" alt="TripMate Logo" width="150" height="150">
+            </div>
+            <h2>Create an account at TripMate</h2>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()"  id="login-form">
+                <div class="form-group">
+                    <label for="email">Full Name:</label>
+                    <input type="name" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirm Password:</label>
+                    <input type="cpassword" id="cpassword" name="cpassword" required>
+                </div>
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html" routerLink="/register">Register</a></p>
         </div>
-        <div class="form-field d-flex align-items-center">
-            <span class="fas fa-key mr-2"></span>
-            <input type="password" name="password" id="pwd" placeholder="Password">
-        </div>
-        <div class="form-field d-flex align-items-center">
-            <span class="fas fa-key mr-2"></span>
-            <input type="cpassword" name="cpassword" id="pwd" placeholder="Confirm Password">
-        </div>
-        <button class="btn mt-3">Login</button>
-    </form>
-    <div class="text-center fs-6">
-        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
     </div>
-  </div>
-  
+</div>

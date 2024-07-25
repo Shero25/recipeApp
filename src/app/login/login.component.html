@@ -1,21 +1,41 @@
+<!-- Success Alert -->
+<div *ngIf="loginSuccess" class="fixed top-0 left-1/2 transform -translate-x-1/2 mt-4 w-full max-w-md z-50 fade-out">
+    <div class="alert alert-success flex items-center justify-center py-2 px-4 rounded shadow-md">
+      <svg class="bi flex-shrink-0 mr-2" role="img" aria-label="Success:" style="width: 1.5em; height: 1.5em;">
+        <use xlink:href="#check-circle-fill"/>
+      </svg>
+      <span>Successfully logged in!</span>
+    </div>
+  </div>
+  
+  <!-- Failure Alert -->
+  <div *ngIf="loginFailed" class="fixed top-0 left-1/2 transform -translate-x-1/2 mt-4 w-full max-w-md z-50 fade-out">
+    <div class="alert alert-danger flex items-center justify-center py-2 px-4 rounded shadow-md">
+      <svg class="bi flex-shrink-0 mr-2" role="img" aria-label="Error:" style="width: 1.5em; height: 1.5em;">
+        <use xlink:href="#exclamation-triangle-fill"/>
+      </svg>
+      <span>Invalid Email or password</span>
+    </div>
+  </div>
 <div class="container">
-  <div class="logo">
-      <img src="/assets/1.png" alt="">
-  </div>
-  <div class="text-center mt-4 name">
-    Recipe Radar
-  </div>
-  <form class="p-3 mt-3 cc">
-      <div class="form-field d-flex align-items-center">
-          <input type="text" name="userName" id="userName" placeholder="Username">
-      </div>
-      <div class="form-field d-flex align-items-center">
-          <span class="fas fa-key mr-2"></span>
-          <input type="password" name="password" id="pwd" placeholder="Password">
-      </div>
-      <button class="btn mt-3">Login</button>
-  </form>
-  <div class="text-center fs-6">
-      <a href="#">Forget password?</a> or <a href="#">Sign up</a>
-  </div>
+    <div class="auth-container">       
+        <div class="auth-form">
+            <div class="logo">
+                <img src="/assets/event.jpg" alt="TripMate Logo" width="150" height="150">
+            </div>
+            <h2>Login to TripMate</h2>
+            <form [formGroup]="signinForm" (ngSubmit)="onSubmit()" >
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html" routerLink="/register">Register</a></p>
+        </div>
+    </div>
 </div>
