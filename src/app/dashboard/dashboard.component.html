@@ -1,17 +1,55 @@
 <app-navbar></app-navbar>
-    <div class="container">
-        <h1>Trips</h1>
-        <div class="recipes-container" id="recipes-container">
-            <div class="card" style="width: 20rem;">
-                <img src="/assets/image copy.png" class="card-img-top" alt="..." style="height: 300px;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn">View</a>
-                  <a href="#" class="btn">Update</a>
-                  <a href="#" class="btn">Delete</a>
-                </div>
-              </div>
+<div class="container">
+  <h1>Trips</h1>
+  <div class="recipes-container" id="recipes-container">
+    <div class="card" *ngFor="let trip of trips" style="width: 20rem;">
+      <img src="/assets/image copy.png" class="card-img-top" alt="..." style="height: 300px;">
+      <div class="card-body">
+        <h5 class="card-title">{{ trip.destination }}</h5>
+        <div>
+          <h3>{{ trip.destination }}</h3>
+          <p><strong>Description:</strong> {{ trip.description }}</p>
+          <p><strong>Activities:</strong> {{ trip.activities }}</p>
+          <p><strong>Start Date:</strong> {{ trip.startDate }}</p>
+          <p><strong>End Date:</strong> {{ trip.endDate }}</p>
         </div>
+        <a href="#" class="btn" (click)="onSelectTrip(trip)">Update</a>
+        <a href="#" class="btn" (click)="onDeleteTrip(trip.id)">Delete</a>
+      </div>
     </div>
+  </div>
+  <div *ngIf="trips.length === 0 && !errorMessage">
+    <p>No trips found for the logged-in user.</p>
+  </div>
 
+  <div *ngIf="selectedTrip">
+    <h2>Update Trip</h2>
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdateTrip()">
+      <label>
+        Destination:
+        <input formControlName="destination" />
+      </label>
+      <label>
+        Description:
+        <input formControlName="description" />
+      </label>
+      <label>
+        Activities:
+        <input formControlName="activities" />
+      </label>
+      <label>
+        Start Date:
+        <input type="date" formControlName="startDate" />
+      </label>
+      <label>
+        End Date:
+        <input type="date" formControlName="endDate" />
+      </label>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

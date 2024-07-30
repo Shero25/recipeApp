@@ -60,6 +60,7 @@ input[type="text"], textarea {
 
 .recipes-container {
     margin-top: 30px;
+
 }
 
 .recipe-card {
@@ -70,7 +71,10 @@ input[type="text"], textarea {
     margin-bottom: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
+.card{
+    padding: 20px;
+    margin: 20px;
+}
 .recipe-card h3 {
     margin-top: 0;
     color: #D82E4A;
@@ -92,4 +96,5 @@ input[type="text"], textarea {
 .btn{
     background-color: #52b69a;
     color: white;
+    margin: 5px;
 }
