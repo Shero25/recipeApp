@@ -29,4 +29,9 @@ export class TripService {
   deleteTrip(userId: string, tripId: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/delete/${userId}/${tripId}`);
   }
+
+  getUpcomingTrips(userId: string, days: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/upcoming/${userId}/${days}`);
+  }
 }
+

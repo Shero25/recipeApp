@@ -11,6 +11,7 @@ import { AuthService } from '../auth.service';
 export class HomepageComponent implements OnInit {
   tripForm: FormGroup;
   selectedFile: File | null = null;
+  Added: boolean = false;
 
   constructor(private fb: FormBuilder, private tripService: TripService, private auth:AuthService) {
     this.tripForm = this.fb.group({
@@ -39,6 +40,7 @@ export class HomepageComponent implements OnInit {
 
         this.tripService.addTrip(data).subscribe(response => {
           console.log('Trip added successfully!', response);
+          this.Added = true;
         }, error => {
           console.error('Error adding trip!', error);
         });

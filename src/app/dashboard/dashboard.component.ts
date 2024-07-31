@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TripService } from '../trip.service';
 import { AuthService } from '../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,11 +15,14 @@ export class DashboardComponent implements OnInit {
   errorMessage: string | null = null;
   updateForm: FormGroup;
   selectedTrip: any | null = null;
+  deleted: boolean = false;
 
   constructor(
     private tripService: TripService,
     private authService: AuthService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router,
+    private notificationService: NotificationService
   ) {
     this.updateForm = this.fb.group({
       destination: ['', Validators.required],
@@ -30,6 +35,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadUserTrips();
+    this.notificationService.checkUpcomingTrips(); // Initial check on load
+  
   }
 
   loadUserTrips(): void {
@@ -83,6 +90,8 @@ export class DashboardComponent implements OnInit {
       this.tripService.deleteTrip(userId, tripId).subscribe(
         (response) => {
           console.log('Trip deleted successfully!', response);
+          this.deleted = true; // Set the deleted flag to true to display a confirmation message
+          this.router.navigate(['/dashboard']);
           this.loadUserTrips(); // Reload the trips to see the changes
         },
         (error) => {
