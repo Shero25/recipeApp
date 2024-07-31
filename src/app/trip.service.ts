@@ -21,10 +21,12 @@ export class TripService {
   }
 
   updateTrip(tripId: number, trip: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/userInfo/${tripId}`, trip);
+    const url = `${this.baseUrl}/userInfo/${tripId}`;
+    return this.http.put(url, trip);
   }
+
   
   deleteTrip(userId: string, tripId: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/userInfo/${userId}/${tripId}`);
+    return this.http.delete(`${this.baseUrl}/delete/${userId}/${tripId}`);
   }
 }

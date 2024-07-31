@@ -20,6 +20,7 @@
   </div>
   <div *ngIf="trips.length === 0 && !errorMessage">
     <p>No trips found for the logged-in user.</p>
+    <button routerLink="/homepage">Add Trips</button>
   </div>
 
   <div *ngIf="selectedTrip">

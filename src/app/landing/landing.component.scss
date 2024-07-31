@@ -1,109 +1,53 @@
-/* Reset default margin and padding of the body */
-.container {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url('../../assets/image.png') no-repeat center center;
+
+.landing-page {
+    position: relative;
+    height: 100vh;
+    background-image: url('/assets/image copy 2.png'); // Update the path to your background image
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.auth-container {
-    background: rgba(46, 46, 46, 0.8);
-    padding: 40px;
-    border-radius: 15px;
-    width: 400px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out;
-}
-
-.auth-form h2 {
-    color: #fff;
     text-align: center;
-    margin-bottom: 25px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.form-group label {
-    color: #fff;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus {
-    border-color: #52b69a;
-}
-
-.auth-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #52b69a;
-    font-weight: bolder;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.auth-button:hover {
-    background-color: #3ac19a;
-}
-
-p {
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-}
-
-p a {
-    color: #52b69a;
-    text-decoration: none;
-}
-
-p a:hover {
-    text-decoration: underline;
-}
-
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-img {
-    border-radius: 50%;
-    padding: 10px;
-    border: 3px solid #52b69a;
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); // To add a dark overlay for better text visibility
     }
-    to {
-        opacity: 1;
+  
+    .content {
+      position: relative;
+      z-index: 1;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+  
+      .get-started {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        color: white;
+        background-color:  #52b69a;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color:  #52b69a;
+        }
+      }
     }
-}
+  }
+  

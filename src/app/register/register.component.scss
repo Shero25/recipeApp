@@ -1,21 +1,20 @@
 /* Reset default margin and padding of the body */
+
 .container {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url('../../assets/image.png') no-repeat center center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: url('../../assets/image copy.png') no-repeat center center;
+    background-size: cover;
 }
 
 .auth-container {
     background: rgba(46, 46, 46, 0.8);
     padding: 40px;
     border-radius: 15px;
-    width: 400px;
+    width: 90%;
+    max-width: 500px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease-in-out;
 }
@@ -105,5 +104,25 @@ img:hover {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .auth-container {
+        padding: 20px;
+    }
+
+    .auth-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .auth-button {
+        padding: 10px;
+        font-size: 16px;
     }
 }

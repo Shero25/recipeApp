@@ -72,6 +72,7 @@ export class DashboardComponent implements OnInit {
         },
         (error) => {
           console.error('Error updating trip!', error);
+          this.errorMessage = 'Error updating trip';
         }
       );
     }

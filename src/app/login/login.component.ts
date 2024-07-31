@@ -43,7 +43,7 @@ export class LoginComponent {
             // Hide the success message and navigate after 1.5 seconds
             setTimeout(() => {
               this.loginSuccess = false;
-              this.router.navigate(['/home']); // Navigate to home page
+              this.router.navigate(['/dashboard']); // Navigate to home page
             }, 1500);
           } else {
             console.error('Token not found in response');
