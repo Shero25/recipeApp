@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TripService } from '../trip.service';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -13,7 +14,7 @@ export class HomepageComponent implements OnInit {
   selectedFile: File | null = null;
   Added: boolean = false;
 
-  constructor(private fb: FormBuilder, private tripService: TripService, private auth:AuthService) {
+  constructor(private fb: FormBuilder, private tripService: TripService, private auth:AuthService,private router: Router) {
     this.tripForm = this.fb.group({
       destination: ['', Validators.required],
       description: ['', Validators.required],
@@ -41,6 +42,7 @@ export class HomepageComponent implements OnInit {
         this.tripService.addTrip(data).subscribe(response => {
           console.log('Trip added successfully!', response);
           this.Added = true;
+          this.router.navigate(['/dashboard']); 
         }, error => {
           console.error('Error adding trip!', error);
         });

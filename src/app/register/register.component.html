@@ -1,3 +1,22 @@
+<!-- Success Alert -->
+<div *ngIf="registerSuccess" class="fixed top-0 left-1/2 transform -translate-x-1/2 mt-4 w-full max-w-md z-50 fade-out">
+    <div class="alert alert-success flex items-center justify-center py-2 px-4 rounded shadow-md">
+      <svg class="bi flex-shrink-0 mr-2" role="img" aria-label="Success:" style="width: 1.5em; height: 1.5em;">
+        <use xlink:href="#check-circle-fill"/>
+      </svg>
+      <span>Successfully Registerd!</span>
+    </div>
+  </div>
+  
+  <!-- Failure Alert -->
+  <div *ngIf="registerFailed" class="fixed top-0 left-1/2 transform -translate-x-1/2 mt-4 w-full max-w-md z-50 fade-out">
+    <div class="alert alert-danger flex items-center justify-center py-2 px-4 rounded shadow-md">
+      <svg class="bi flex-shrink-0 mr-2" role="img" aria-label="Error:" style="width: 1.5em; height: 1.5em;">
+        <use xlink:href="#exclamation-triangle-fill"/>
+      </svg>
+      <span>Registration failed. Try again!!</span>
+    </div>
+  </div>
 <!-- login.component.html -->
 <div class="container">
     <div class="auth-container">

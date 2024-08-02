@@ -68,9 +68,10 @@ export class AuthService {
     return !!this.getToken();
   }
 
-  // Method to logout user by removing JWT token from localStorage and navigating to signin page
+  // Method to logout user 
   logout(): void {
-    this.clearToken();
-    window.location.href = '/';
+    // Clear tokens 
+    localStorage.removeItem('token');
+    this.router.navigate(['/landing']);
   }
 }

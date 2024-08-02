@@ -91,21 +91,10 @@ img {
     border-radius: 50%;
     padding: 10px;
     border: 3px solid #52b69a;
-    transition: transform 0.3s;
 }
 
-img:hover {
-    transform: scale(1.1);
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 600px) {

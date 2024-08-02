@@ -12,7 +12,9 @@ export class NavbarComponent {
   constructor(private auth:AuthService,private router:Router){}
 
   logout(): void {
+    console.log("logout clicked");
+    
     this.auth.logout();
-    this.router.navigate(['/login']); // Redirect to login page after logout
+    this.router.navigate(['/landing'])
   }
 }
