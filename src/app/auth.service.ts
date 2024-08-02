@@ -19,13 +19,8 @@ export class AuthService {
   }
 
   // Method to handle user login
-  login(credentials?: { email: string, password: string }): Observable<{ token: string }> {
-    if (credentials) {
-      return this.http.post<{ token: string }>(`${this.apiUrl}/login`, credentials);
-    } else {
-      window.location.href = 'http://localhost:8080/oauth2/authorization/google';
-      return new Observable(); // Return an empty observable for OAuth login
-    }
+  login(credentials: { email: string, password: string }): Observable<{ token: string }> {
+    return this.http.post<{ token: string }>(`${this.apiUrl}/login`, credentials);
   }
 
   // Method to save JWT token to localStorage
