@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container" style="padding: 30px;">
+    <h2>Update Trip</h2>
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdateTrip()">
+      <label>
+        Destination:
+        <input formControlName="destination" />
+      </label>
+      <label>
+        Description:
+        <input formControlName="description" />
+      </label>
+      <label>
+        Activities:
+        <input formControlName="activities" />
+      </label>
+      <label>
+        Start Date:
+        <input type="date" formControlName="startDate" />
+      </label>
+      <label>
+        End Date:
+        <input type="date" formControlName="endDate" />
+      </label>
+      <button type="submit">Update</button>
+    </form>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  

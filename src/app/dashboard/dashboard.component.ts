@@ -68,10 +68,14 @@ export class DashboardComponent implements OnInit {
     this.selectedTrip = trip;
     this.updateForm.patchValue(trip);
   }
-
+  // onSelectTrip(trip: any): void {
+  //   this.selectedTrip = trip;
+  //   this.router.navigate(['/update-trip', trip.id]);
+  // }
   onUpdateTrip(): void {
     if (this.updateForm.valid && this.selectedTrip) {
-      this.tripService.updateTrip(this.selectedTrip.id, this.updateForm.value).subscribe(
+      const updatedTrip = { ...this.selectedTrip, ...this.updateForm.value };
+      this.tripService.updateTrip(this.selectedTrip.id, updatedTrip).subscribe(
         (response) => {
           console.log('Trip updated successfully!', response);
           this.loadUserTrips(); // Reload the trips to see the changes
@@ -82,6 +86,8 @@ export class DashboardComponent implements OnInit {
           this.errorMessage = 'Error updating trip';
         }
       );
+    } else {
+      console.error('Form is invalid or no trip selected!');
     }
   }
   onDeleteTrip(tripId: number): void {
@@ -90,8 +96,7 @@ export class DashboardComponent implements OnInit {
       this.tripService.deleteTrip(userId, tripId).subscribe(
         (response) => {
           console.log('Trip deleted successfully!', response);
-          this.deleted = true; // Set the deleted flag to true to display a confirmation message
-          this.router.navigate(['/dashboard']);
+          this.deleted = true;
           this.loadUserTrips(); // Reload the trips to see the changes
         },
         (error) => {

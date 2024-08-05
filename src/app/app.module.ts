@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { TripUpdateComponent } from './trip-update/trip-update.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     DashboardComponent,
     NavbarComponent,
     AddRecipeComponent,
-    LandingComponent
+    LandingComponent,
+    TripUpdateComponent
   ],
   imports: [
     BrowserModule,

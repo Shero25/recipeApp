@@ -15,6 +15,6 @@ export class NavbarComponent {
     console.log("logout clicked");
     
     this.auth.logout();
-    this.router.navigate(['/landing'])
+    // this.router.navigate(['/landing'])
   }
 }
