@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { AddRecipeComponent } from './profile/add-recipe.component';
 import { LandingComponent } from './landing/landing.component';
 import { TripUpdateComponent } from './trip-update/trip-update.component';
 

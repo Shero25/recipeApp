@@ -8,7 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { AddRecipeComponent } from './profile/add-recipe.component';
 import { LandingComponent } from './landing/landing.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
