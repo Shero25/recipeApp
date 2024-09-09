@@ -1,5 +1,5 @@
 # Step 1: Use the official Node.js image as the base image for building the Angular app
-FROM node:16 as build
+FROM node:16-alpine as build
 
 # Step 2: Set the working directory inside the container
 WORKDIR /app
