@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image for building the Angular app
-FROM node:16.14-alpine as angular
+FROM node:16-alpine as angular
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -16,8 +16,8 @@ COPY . .
 # Build the Angular app for production
 RUN npm run build
 
-# Use the official Node.js image to serve the application
-FROM httpd:alpine3.15
+# Use the official HTTPD image to serve the application
+FROM httpd:alpine
 
 # Set the working directory
 WORKDIR /usr/local/apache2/htdocs 
@@ -25,11 +25,8 @@ WORKDIR /usr/local/apache2/htdocs
 # Copy the built files from the build stage to the new working directory
 COPY --from=angular /app/dist/recipe-app .
 
-# Install a simple HTTP server to serve the static files
-RUN npm install -g http-server
-
-# Expose port 8080 (or any port of your choice)
-EXPOSE 8080
+# Expose port 80 (or any port of your choice)
+EXPOSE 80
 
 # Start the HTTP server to serve the Angular app
-CMD ["npm", "start"]
+CMD ["httpd-foreground"]
