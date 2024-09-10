@@ -26,7 +26,7 @@ WORKDIR /usr/local/apache2/htdocs
 COPY --from=angular /app/dist/recipe-app .
 
 # Copy custom Apache configuration file
-COPY httpd.conf /usr/local/apache2/conf/httpd.conf
+# COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 
 # Expose port 80 (or any port of your choice)
 EXPOSE 80
