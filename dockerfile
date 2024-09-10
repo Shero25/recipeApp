@@ -32,4 +32,4 @@ RUN npm install -g http-server
 EXPOSE 8080
 
 # Start the HTTP server to serve the Angular app
-CMD ["httpd-foreground"]
+CMD ["npm", "start"]
