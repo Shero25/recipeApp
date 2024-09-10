@@ -17,13 +17,16 @@ COPY . .
 RUN npm run build
 
 # Use the official HTTPD image to serve the application
-FROM httpd:alpine
+FROM httpd:latest
 
 # Set the working directory
 WORKDIR /usr/local/apache2/htdocs 
 
 # Copy the built files from the build stage to the new working directory
 COPY --from=angular /app/dist/recipe-app .
+
+# Copy custom Apache configuration file
+COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 
 # Expose port 80 (or any port of your choice)
 EXPOSE 80
