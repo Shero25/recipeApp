@@ -19,7 +19,6 @@ RUN npm run build
 # Use the official HTTPD image to serve the application
 FROM httpd:2.4
 
-
 # Set the working directory
 WORKDIR /usr/local/apache2/htdocs 
 
